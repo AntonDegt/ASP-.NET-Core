@@ -1,0 +1,46 @@
+﻿﻿@using AspNetCore.Services
+@inject DateService dateService
+@inject TimeService timeService
+@inject DateTimeService dateTimeService
+
+@{
+    ViewData["Title"] = "Сервисы";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Службы</h1>
+</div>
+
+<table style="width: 100%">
+    <tr>
+        <th>Object</th>
+        <th>HashCode (в контроллере)</th>
+        <th>HashCode (в представление)</th>
+    </tr>
+    <tr>
+        <td>HomeController</td>
+        <td>@ViewData["HCHash"]</td>
+        <td>---</td>
+    </tr>
+    <tr>
+        <td>DateService</td>
+        <td>@ViewData["DSHash"]</td>
+        <td>@dateService.GetHashCode()</td>
+    </tr>
+    <tr>
+        <td>TimeService</td>
+        <td>@ViewData["TSHash"]</td>
+        <td>@dateService.GetHashCode()</td>
+    </tr>
+    <tr>
+        <td>DateTimeService</td>
+        <td>@ViewData["DTSHash"]</td>
+        <td>@dateTimeService.GetHashCode()</td>
+    </tr>
+</table>
+<br/>
+
+<p>Данные от службы DateService: <b><i>@ViewData["Date"]</i></b> </p>
+<p>Данные от службы TimeService: <b><i>@ViewData["Time"]</i></b> </p>
+<p>Данные от службы DateTimeService: <b><i>@ViewData["DateTime"]</i></b> </p>

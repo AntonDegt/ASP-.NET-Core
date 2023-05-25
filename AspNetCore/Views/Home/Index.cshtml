@@ -1,0 +1,93 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+
+<h3><a href="/Home/Intro">Введение в ASP</a></h3>
+<h3><a href="/Home/Razor">Введение в Razor</a></h3>
+<h3><a href="/Home/Services">Введение в Службы</a></h3>
+
+
+
+<h1>HomeWork1</h1>
+<p>
+    Отображение строк из массива
+    @{
+        string[] strings = new string[] { "Робототехника", "Основы информационных технологий", 
+        "Python", "C++", "ООП", "ООП, UML и патерны", ".Net C#", "WinForms / WPF", "Базы данных", 
+        "ADO.Net", "Web", "Системное программирование", "Сетевое программирование", "JavaScript" };
+    }
+
+    <h3>В виде списка</h3>
+    <ul>
+        @for (int i = 0; i < strings.Length; i++)
+        {
+            <li>@strings[i]</li>
+        }
+    </ul>
+
+    <h3>В виде таблицы</h3>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+    <table>
+        <thead>
+            <tr>
+                <td>Index</td>
+                <td>String</td>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < strings.Length; i++)
+            {
+                <tr>
+                    <td>@i</td>
+                    <td>@strings[i]</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h3>В виде "плиток"</h3>
+    <style>
+        div.cont {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        div.tile {
+            border: 1px solid black;
+            background-color: rgba(0,0,0, 0.1);
+            width: 100px;
+            height: 150px;
+            margin: 10px;
+            padding: 5px;
+            display: flex;
+            overflow-wrap: anywhere;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+        }
+    </style>
+    
+    <div class="cont">
+        @for (int i = 0; i < strings.Length; i++)
+        {
+            <div class="tile">
+                <p>@i</p>
+                <p>@strings[i]</p>
+            </div>
+        }
+    </div>
+
+
+
+ </p>
