@@ -4,10 +4,10 @@ namespace AspNetCore.Services
 {
     public class DateTimeService
     {
-        private readonly DateService _dateService;
+        private readonly IDateService _dateService;
         private readonly TimeService _timeService;
 
-        public DateTimeService(DateService dateService, TimeService timeService)
+        public DateTimeService(IDateService dateService, TimeService timeService)
         {
             _dateService = dateService;
             _timeService = timeService;

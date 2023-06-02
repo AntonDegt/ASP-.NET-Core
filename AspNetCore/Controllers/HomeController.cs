@@ -10,13 +10,13 @@ namespace AspNetCore.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly DateService _dateService;
+        private readonly IDateService _dateService;
         private readonly TimeService _timeService;
         private readonly DateTimeService _dateTimeService;
 
         public HomeController(
             ILogger<HomeController> logger, 
-            DateService dateService,
+            IDateService dateService,
             TimeService timeService,
             DateTimeService dateTimeService)
         {
