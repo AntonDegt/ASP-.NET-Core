@@ -30,3 +30,9 @@
 
 ![image](https://github.com/AntonDegt/ASP-.NET-Core/assets/108671823/3408b6a1-6ef8-445f-a958-0a507d7c6270)
 
+
+
+
+#HomeWork 4
+Реализовать поведение, при котором успешная валидация и создание пользователя приведут к выводу сообщения об успешной регистрации и очистят все поля формы (и рез-ты валидации)
+![image](https://github.com/AntonDegt/ASP-.NET-Core/assets/108671823/acda9cdf-3578-4ccf-9698-cf858ef9ece1)
